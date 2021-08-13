@@ -47,3 +47,10 @@ if [[ "$GLOB" != *"$EXPECTED_FAIL_FILE"* ]]; then
   exit 1
 fi
 echo "[PASS] glob argument resolution" >&2
+
+eval "/usr/bin/env node $FULL_SCRIPT_PATH --set-exit-if-changed -n --glob=testproject/**/*.java"
+if [ "$?" != 1 ]; then
+  echo "[FAIL] Expected return status to be 1, got $?" >&2
+  exit 1
+fi
+echo "[PASS] error code check" >&2
