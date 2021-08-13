@@ -1,0 +1,37 @@
+{
+  "name": "google-java-format",
+  "version": "1.0.0",
+  "description": "node wrapper around google-java-format",
+  "author": "Invertase <oss@invertase.io> (http://invertase.io)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:invertase/google-java-format.git"
+  },
+  "main": "index.js",
+  "bin": {
+    "google-java-format": "index.js"
+  },
+  "scripts": {
+    "test": "bash ./test.sh",
+    "shipit": "nc --no-tests"
+  },
+  "contributors": [
+    "Mike Hardy <github@mikehardy.net>"
+  ],
+  "keywords": [
+    "java-format",
+    "react-native",
+    "google-java-format",
+    "java",
+    "format"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^3.2.1",
+    "glob": "^7.0.0",
+    "resolve": "^1.1.6"
+  },
+  "devDependencies": {
+    "nc": "^1.0.3"
+  }
+}
