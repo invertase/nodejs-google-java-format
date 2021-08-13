@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+# set -e
 
 EXPECTED='(x): number => 123\n'
 ACTUAL=$(echo '(  \n x ) : number  =>   123  ' | /usr/bin/env node index.js -assume-filename a.js)
@@ -48,6 +48,7 @@ if [[ "$GLOB" != *"$EXPECTED_FAIL_FILE"* ]]; then
 fi
 echo "[PASS] glob argument resolution" >&2
 
+echo "(The next output lines will be an expected error, as we test error codes)"
 eval "/usr/bin/env node $FULL_SCRIPT_PATH --set-exit-if-changed -n --glob=testproject/**/*.java"
 if [ "$?" != 1 ]; then
   echo "[FAIL] Expected return status to be 1, got $?" >&2
