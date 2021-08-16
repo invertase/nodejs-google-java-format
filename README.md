@@ -6,7 +6,7 @@ Very useful in libraries that wrap native java code in javascript
 
 ## Usage Example
 
-1. (optional) `yarn add @invertase/google-java-format` (or `npm -i @invertase/google-java-format` if you prefer)
+1. (optional) `yarn add google-java-format` (or `npm -i google-java-format` if you prefer)
 1. `npx google-java-format <path to java file>`
 
 All arguments are passed directly to the underlying google-java-format tool, with the exception of `--glob`.
