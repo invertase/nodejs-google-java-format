@@ -11,6 +11,12 @@
   "bin": {
     "google-java-format": "index.js"
   },
+  "files": [
+    "test.sh",
+    "lib/",
+    "index.js",
+    "testproject/"
+  ],
   "scripts": {
     "test": "bash ./test.sh",
     "shipit": "nc --no-tests"
