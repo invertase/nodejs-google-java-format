@@ -27,8 +27,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "async": "^3.2.1",
-    "glob": "^7.0.0",
+    "async": "^3.2.2",
+    "glob": "^7.2.0",
     "resolve": "^1.1.6"
   },
   "devDependencies": {
