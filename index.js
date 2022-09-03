@@ -82,7 +82,7 @@ function spawnGoogleJavaFormat(args, done, stdio) {
     "--add-exports",
     "jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED",
     "-jar",
-    `${LOCATION}/lib/google-java-format-1.11.0-all-deps.jar`,
+    `${LOCATION}/lib/google-java-format-1.15.0-all-deps.jar`,
   ].concat(args);
 
   // extract glob, if present
