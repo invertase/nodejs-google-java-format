@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "test": "bash ./test.sh",
-    "shipit": "nc --no-tests"
+    "shipit": "np --no-tests"
   },
   "contributors": [
     "Mike Hardy <github@mikehardy.net>"
@@ -38,6 +38,6 @@
     "resolve": "^1.22.1"
   },
   "devDependencies": {
-    "nc": "^1.0.3"
+    "np": "^7.6.2"
   }
 }
