@@ -33,9 +33,9 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "async": "^3.2.2",
-    "glob": "^7.2.0",
-    "resolve": "^1.1.6"
+    "async": "^3.2.4",
+    "glob": "^8.0.3",
+    "resolve": "^1.22.1"
   },
   "devDependencies": {
     "nc": "^1.0.3"
