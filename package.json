@@ -34,10 +34,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "async": "^3.2.4",
-    "glob": "^8.0.3",
-    "resolve": "^1.22.1"
+    "glob": "^8.1.0",
+    "resolve": "^1.22.8"
   },
   "devDependencies": {
-    "np": "^7.6.2"
+    "np": "^7.7.0"
   }
 }
