@@ -71,18 +71,8 @@ function spawnGoogleJavaFormat(args, done, stdio) {
 
   // Add the library in, with java 16 compat
   args = [
-    "--add-exports",
-    "jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED",
-    "--add-exports",
-    "jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED",
-    "--add-exports",
-    "jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED",
-    "--add-exports",
-    "jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED",
-    "--add-exports",
-    "jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED",
     "-jar",
-    `${LOCATION}/lib/google-java-format-1.15.0-all-deps.jar`,
+    `${LOCATION}/lib/google-java-format-1.18.1-all-deps.jar`,
   ].concat(args);
 
   // extract glob, if present
