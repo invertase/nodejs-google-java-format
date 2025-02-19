@@ -36,7 +36,7 @@
     "resolve": "^1.22.10"
   },
   "devDependencies": {
-    "np": "^7.7.0"
+    "np": "^10.2.0"
   },
   "packageManager": "yarn@4.6.0"
 }
