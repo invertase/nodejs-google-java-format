@@ -8,9 +8,7 @@
     "url": "git@github.com:invertase/google-java-format.git"
   },
   "main": "index.js",
-  "bin": {
-    "google-java-format": "index.js"
-  },
+  "bin": "index.js",
   "files": [
     "test.sh",
     "lib/",
@@ -39,5 +37,6 @@
   },
   "devDependencies": {
     "np": "^7.7.0"
-  }
+  },
+  "packageManager": "yarn@4.6.0"
 }
