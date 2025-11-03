@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "test": "bash ./test.sh",
-    "shipit": "np --no-tests"
+    "shipit": "release-it"
   },
   "contributors": [
     "Mike Hardy <github@mikehardy.net>"
@@ -36,7 +36,11 @@
     "resolve": "^1.22.11"
   },
   "devDependencies": {
-    "np": "^10.2.0"
+    "@release-it/conventional-changelog": "^10.0.1",
+    "release-it": "^19.0.5"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "packageManager": "yarn@4.10.3"
 }
