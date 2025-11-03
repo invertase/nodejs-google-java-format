@@ -1,0 +1,19 @@
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # For git operations
+      id-token: write # < REQUIRED FOR OIDC
+
+    steps:
+      - uses: actions/checkout
+      - uses: actions/setup-node
+        with:
+          node-version: "lts/*"
+          registry-url: "https://registry.npmjs.org"
+
+      # OIDC requires npm v11.5.1 or later
+      # Node.js v20 comes with v10.8, so we need to update it:
+      - run: yarn release-it --ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.MIKE_HARDY_RELEASE_GITHUB_TOKEN }}
