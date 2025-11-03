@@ -6,7 +6,7 @@ const os = require("os");
 const path = require("path");
 const resolve = require("resolve").sync;
 const spawn = require("child_process").spawn;
-const glob = require("glob");
+const { globSync } = require("glob");
 const async = require("async");
 
 const VERSION = require("./package.json").version;
@@ -82,52 +82,47 @@ function spawnGoogleJavaFormat(args, done, stdio) {
     // remove glob from arg list
     args = args.filter((arg) => arg.indexOf(GLOB_OPTION) === -1);
 
-    glob(filesGlob, function (err, files) {
-      if (err) {
-        done(err);
-        return;
-      }
+    const files = globSync(filesGlob);
 
-      // split file array into chunks of 30
-      let i,
-        j,
-        chunks = [],
-        chunkSize = 30;
+    // split file array into chunks of 30
+    let i,
+      j,
+      chunks = [],
+      chunkSize = 30;
 
-      for (i = 0, j = files.length; i < j; i += chunkSize) {
-        chunks.push(files.slice(i, i + chunkSize));
-      }
+    for (i = 0, j = files.length; i < j; i += chunkSize) {
+      chunks.push(files.slice(i, i + chunkSize));
+    }
 
-      // launch a new process for each chunk
-      async.series(
-        chunks.map(function (chunk) {
-          return function (callback) {
-            const googlejavaFormatProcess = spawn(
-              nativeBinary,
-              args.concat(chunk),
-              { stdio: stdio }
-            );
-            googlejavaFormatProcess.on("close", function (exit) {
-              if (exit !== 0) callback(errorFromExitCode(exit));
-              else callback();
-            });
-          };
-        }),
-        function (err) {
-          if (err) {
-            done(err);
-            return;
-          }
-          console.log("\n");
-          console.log(
-            `ran google-java-format on ${files.length} ${
-              files.length === 1 ? "file" : "files"
-            }`
+    // launch a new process for each chunk
+    async.series(
+      chunks.map(function (chunk) {
+        return function (callback) {
+          const googlejavaFormatProcess = spawn(
+            nativeBinary,
+            args.concat(chunk),
+            { stdio: stdio }
           );
-          done();
+          googlejavaFormatProcess.on("close", function (exit) {
+            if (exit !== 0) callback(errorFromExitCode(exit));
+            else callback();
+          });
+        };
+      }),
+      function (err) {
+        if (err) {
+          done(err);
+          return;
         }
-      );
-    });
+        console.log("\n");
+        console.log(
+          `ran google-java-format on ${files.length} ${
+            files.length === 1 ? "file" : "files"
+          }`
+        );
+        done();
+      }
+    );
   } else {
     const googlejavaFormatProcess = spawn(nativeBinary, args, { stdio: stdio });
     googlejavaFormatProcess.on("close", function (exit) {
