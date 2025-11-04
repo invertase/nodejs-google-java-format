@@ -1,6 +1,6 @@
 {
   "name": "google-java-format",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "node wrapper around google-java-format",
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
   "repository": {
