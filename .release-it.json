@@ -6,8 +6,15 @@
   "github": {
     "release": true
   },
-  
   "npm": {
     "skipChecks": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": {
+        "name": "conventionalcommits"
+      },
+      "infile": "CHANGELOG.md"
+    }
   }
 }
