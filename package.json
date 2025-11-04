@@ -5,7 +5,7 @@
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:invertase/google-java-format.git"
+    "url": "https://github.com:invertase/nodejs-google-java-format.git"
   },
   "main": "index.js",
   "bin": "index.js",
