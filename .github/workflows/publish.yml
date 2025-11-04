@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: "lts/*"
           registry-url: "https://registry.npmjs.org"
-      - run: yarn release-it --ci
+      - name: publish package
+        run: |
+          yarn
+          yarn release-it --ci
         env:
           GITHUB_TOKEN: ${{ secrets.MIKE_HARDY_RELEASE_GITHUB_TOKEN }}
