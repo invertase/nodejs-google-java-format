@@ -72,7 +72,7 @@ function spawnGoogleJavaFormat(args, done, stdio) {
   // Add the library in, with java 16 compat
   args = [
     "-jar",
-    `${LOCATION}/lib/google-java-format-1.32.0-all-deps.jar`,
+    `${LOCATION}/lib/google-java-format-1.34.0-all-deps.jar`,
   ].concat(args);
 
   // extract glob, if present
