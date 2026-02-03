@@ -18,18 +18,18 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 1
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
       - name: Configure JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: "temurin"
-          java-version: "21"
-      - uses: actions/cache/restore@v4
+          java-version: "25"
+      - uses: actions/cache/restore@v5
         name: Yarn Cache Restore
         id: yarn-cache
         with:
@@ -45,7 +45,7 @@ jobs:
           command: yarn
       - name: Lint
         run: ./test.sh
-      - uses: actions/cache/save@v4
+      - uses: actions/cache/save@v5
         name: Yarn Cache Save
         if: "${{ github.ref == 'refs/heads/main' }}"
         with:
