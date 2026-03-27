@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "test": "bash ./test.sh",
+    "update-google-java-format": "node ./scripts/update-google-java-format.js",
     "shipit": "release-it"
   },
   "contributors": [
