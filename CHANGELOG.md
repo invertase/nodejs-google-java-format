@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/invertase/nodejs-google-java-format/compare/v2.1.0...v2.2.0) (2026-04-02)
+
+### Features
+
+* adopt upstream google-java-format [1.35.0] ([b8469ff](https://github.com/invertase/nodejs-google-java-format/commit/b8469ff0cf4df29b52afea6e4ae18cc6dbdb3056))
+* workflow to automatically update java format + create PR ([8610504](https://github.com/invertase/nodejs-google-java-format/commit/861050451d4478b6b04363956ee8d59ab190a48d))
+
 ## [2.1.0](https://github.com/invertase/nodejs-google-java-format/compare/v2.0.4...v2.1.0) (2026-02-03)
 
 ### Features
