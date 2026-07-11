@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.3.0](https://github.com/invertase/nodejs-google-java-format/compare/v2.2.0...v2.3.0) (2026-07-11)
+
+### Features
+
+* adopt google-java-format 1.35.0 and chunk large file lists ([e7f3e25](https://github.com/invertase/nodejs-google-java-format/commit/e7f3e2519ce89e36e7d2b34899239e5448962a9c))
+
 ## [2.2.0](https://github.com/invertase/nodejs-google-java-format/compare/v2.1.0...v2.2.0) (2026-04-02)
 
 ### Features
